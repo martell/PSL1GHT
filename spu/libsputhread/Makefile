@@ -60,8 +60,8 @@ spu:
 #---------------------------------------------------------------------------------
 install: all
 #---------------------------------------------------------------------------------
-	@[ -d $(PSL1GHT)/spu/lib ] || mkdir -p $(PSL1GHT)/spu/lib
-	@cp -frv $(CURDIR)/lib/spu/*.a $(PSL1GHT)/spu/lib
+	@[ -d $(DESTDIR)/$(SPUNAME)/lib ] || mkdir -p $(DESTDIR)/$(SPUNAME)/lib
+	@cp -frv $(CURDIR)/lib/spu/*.a $(DESTDIR)/$(SPUNAME)/lib
 
 #---------------------------------------------------------------------------------
 $(LIBRARY).a: $(OBJS)
