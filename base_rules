@@ -42,6 +42,10 @@ ifneq (,$(findstring MINGW,$(UNAME)))
 	POSTFIX		:=	.exe
 endif
 
+#ifneq (,$(findstring MSYS,$(UNAME)))
+#	POSTFIX		:=	.exe
+#endif
+
 ifneq (,$(findstring CYGWIN,$(UNAME)))
 	POSTFIX		:=	.exe
 endif

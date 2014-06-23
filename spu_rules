@@ -6,14 +6,17 @@ ifeq ($(strip $(PS3DEV)),)
   endif
 endif
 
-export PATH	:=	$(PS3DEV)/bin:$(PS3DEV)/spu/bin:$(PATH)
+SPUNAME 	=	spu-unknown-elf
+#spu
+
+export PATH	:=	$(PS3DEV)/bin:$(PS3DEV)/$(SPUNAME)/bin:$(PATH)
 
 export PORTLIBS	:=	$(PS3DEV)/portlibs/spu
 
 export LIBPSL1GHT_INC	:=	-I$(PSL1GHT)/spu/include -I$(PSL1GHT)/spu/include/simdmath
 export LIBPSL1GHT_LIB	:=	-L$(PSL1GHT)/spu/lib
 
-PREFIX	:=	spu-
+PREFIX	:=	$(SPUNAME)-
 
 MACHDEP =
 

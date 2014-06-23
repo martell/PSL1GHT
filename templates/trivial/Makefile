@@ -13,9 +13,9 @@
 OFILES=source/main.o
 
 #The CFLAGS are not set by the framework makefiles. These are sound defaults.
-CFLAGS=-I$(PS3DEV)/ppu/include -std=gnu99
+CFLAGS=-I$(PS3DEV)/powerpc64-ps3-elf/include -mcpu=cell
 
-LDFLAGS=
+LDFLAGS= -T lv2.ld --print-gc-sections
 
 # Destination where the .pkg is built
 BUILDDIR=build

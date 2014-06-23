@@ -21,8 +21,8 @@ endif
 ifneq (,$(findstring MINGW,$(UNAME)))
 	PLATFORM	:= win32
 	POSTFIX		:= .exe
-	CFLAGS		+= -mno-cygwin
-	LDFLAGS		+= -mno-cygwin -s -lgmp -lcrypto -lz
+	#CFLAGS		+= -mno-cygwin
+	LDFLAGS		+= -s -lgmp -lcrypto -lz
 	OS			:= win32
 endif
 

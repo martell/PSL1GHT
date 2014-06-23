@@ -33,8 +33,8 @@ endif
 ifneq (,$(findstring MINGW,$(UNAME)))
 	PLATFORM	:= win32
 	EXEEXT		:= .exe
-	CFLAGS		+= -mno-cygwin
-	LDFLAGS		+= -mno-cygwin -s
+	#CFLAGS		+= -mno-cygwin
+	LDFLAGS		+= -s
 	OS	:=	win32
 endif
 

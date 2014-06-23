@@ -19,8 +19,8 @@ LDFLAGS		:= $(DEBUGFLAGS)
 
 ifneq (,$(findstring MINGW,$(UNAME)))
 	POSTFIX	:= .exe
-	CFLAGS	+= -mno-cygwin
-	LDFLAGS += -mno-cygwin -s -lelf
+	#CFLAGS	+= -mno-cygwin
+	LDFLAGS += -s -lelf
 	OS		:= win32
 endif
 
