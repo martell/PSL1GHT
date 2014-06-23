@@ -72,8 +72,8 @@ ppu:
 #---------------------------------------------------------------------------------
 install: all
 #---------------------------------------------------------------------------------
-	@[ -d $(PSL1GHT)/ppu/lib ] || mkdir -p $(PSL1GHT)/ppu/lib
-	@cp -frv $(CURDIR)/lib/ppu/*.a $(PSL1GHT)/ppu/lib
+	@[ -d $(DESTDIR)/$(PPUNAME)/lib ] || mkdir -p $(DESTDIR)/$(PPUNAME)/lib
+	@cp -frv $(CURDIR)/lib/ppu/*.a $(DESTDIR)/$(PPUNAME)/lib
 
 #---------------------------------------------------------------------------------
 $(LIBRARY).a: sprx.o resc_wrapper.o
