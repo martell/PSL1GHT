@@ -79,7 +79,7 @@ install-header:
 install: all install-header
 #---------------------------------------------------------------------------------
 	@[ -d $(DESTDIR)/$(SPUNAME)/lib ] || mkdir -p $(DESTDIR)/$(SPUNAME)/lib
-	@cp -frv $(CURDIR)/lib/spu/*.a $(DESTDIR)/$(SPUNAME)spu/lib
+	@cp -frv $(CURDIR)/lib/spu/*.a $(DESTDIR)/$(SPUNAME)/spu/lib
 
 #---------------------------------------------------------------------------------
 $(LIBRARY).a: $(OBJS)
