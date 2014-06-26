@@ -7,9 +7,9 @@
 all:
 
 install:
-	@[ -d $(PSL1GHT)/spu/include/vectormath ] || mkdir -p $(PSL1GHT)/spu/include/vectormath
-	@cp -frv $(CURDIR)/c $(PSL1GHT)/spu/include/vectormath
-	@cp -frv $(CURDIR)/cpp $(PSL1GHT)/spu/include/vectormath
+	@[ -d $(DESTDIR)/$(SPUNAME)/include/vectormath ] || mkdir -p $(DESTDIR)/$(SPUNAME)/include/vectormath
+	@cp -frv $(CURDIR)/c $(DESTDIR)/$(SPUNAME)/include/vectormath
+	@cp -frv $(CURDIR)/cpp $(DESTDIR)/$(SPUNAME)/include/vectormath
 
 clean:
 

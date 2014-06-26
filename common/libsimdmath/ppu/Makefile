@@ -63,14 +63,14 @@ ppu:
 #---------------------------------------------------------------------------------
 install-header:
 #---------------------------------------------------------------------------------
-	@[ -d $(PSL1GHT)/ppu/include/simdmath ] || mkdir -p $(PSL1GHT)/ppu/include/simdmath
-	@cp -frv $(CURDIR)/../common/simdmath.h $(PSL1GHT)/ppu/include/simdmath
+	@[ -d $(DESTDIR)/$(PPUNAME)/include/simdmath ] || mkdir -p $(DESTDIR)/$(PPUNAME)/include/simdmath
+	@cp -frv $(CURDIR)/../common/simdmath.h $(DESTDIR)/$(PPUNAME)/include/simdmath
 
 #---------------------------------------------------------------------------------
 install: all install-header
 #---------------------------------------------------------------------------------
-	@[ -d $(PSL1GHT)/ppu/lib ] || mkdir -p $(PSL1GHT)/ppu/lib
-	@cp -frv $(CURDIR)/lib/ppu/*.a $(PSL1GHT)/ppu/lib
+	@[ -d $(DESTDIR)/$(PPUNAME)/lib ] || mkdir -p $(DESTDIR)/$(PPUNAME)/lib
+	@cp -frv $(CURDIR)/lib/ppu/*.a $(DESTDIR)/$(PPUNAME)/lib
 
 #---------------------------------------------------------------------------------
 $(LIBRARY).a: $(OBJS)
