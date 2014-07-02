@@ -4,6 +4,12 @@
 .SUFFIXES:
 #---------------------------------------------------------------------------------
 
+ifeq ($(strip $(PSL1GHT)),)
+$(error "Please set PSL1GHT in your environment. export PSL1GHT=<path>")
+endif
+
+include	$(PSL1GHT)/ppu_rules
+
 all:
 
 install:
